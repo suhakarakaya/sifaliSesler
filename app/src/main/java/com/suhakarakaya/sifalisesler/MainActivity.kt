@@ -1,13 +1,17 @@
 package com.suhakarakaya.sifalisesler
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
+import android.widget.AdapterView
 import kotlinx.android.synthetic.main.activity_main.*
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), AdapterView.OnItemClickListener {
 
     companion object {
         var dataList = ArrayList<Data>()
+        var mPosition: Int = 0
     }
 
     //var dataList: ArrayList<Data>? = null
@@ -20,6 +24,7 @@ class MainActivity : AppCompatActivity() {
         initData()
         mainPageAdapter = MainPageAdapter(applicationContext, dataList)
         gv_images.adapter = mainPageAdapter
+        gv_images.onItemClickListener = this
     }
 
     private fun initData() {
@@ -155,5 +160,16 @@ class MainActivity : AppCompatActivity() {
                 "Eser/Music: Kemençeci Nikolaki"
             )
         )
+    }
+
+    override fun onItemClick(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
+        var items: Data = dataList!!.get(p2)
+        Intent(this, DetailActivity::class.java).also {
+            //it.putExtra("whichOne", items.id - 1)
+            mPosition = items.id - 1
+            it.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+            startActivity(it)
+        }
+
     }
 }
