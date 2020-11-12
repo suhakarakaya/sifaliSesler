@@ -4,7 +4,9 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.view.ViewGroup
 import android.widget.AdapterView
+import android.widget.Button
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity(), AdapterView.OnItemClickListener {
@@ -25,6 +27,16 @@ class MainActivity : AppCompatActivity(), AdapterView.OnItemClickListener {
         mainPageAdapter = MainPageAdapter(applicationContext, dataList)
         gv_images.adapter = mainPageAdapter
         gv_images.onItemClickListener = this
+
+       /* val crashButton = Button(this)
+        crashButton.text = "Crash!"
+        crashButton.setOnClickListener {
+            throw RuntimeException("hata sühaaa") // Force a crash
+        }
+
+        addContentView(crashButton, ViewGroup.LayoutParams(
+            ViewGroup.LayoutParams.MATCH_PARENT,
+            ViewGroup.LayoutParams.WRAP_CONTENT))*/
     }
 
     private fun initData() {

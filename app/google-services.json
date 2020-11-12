@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "701920884557",
+    "firebase_url": "https://sifalisesler.firebaseio.com",
+    "project_id": "sifalisesler",
+    "storage_bucket": "sifalisesler.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:701920884557:android:914874a61a5a2de07fe904",
+        "android_client_info": {
+          "package_name": "com.suhakarakaya.sifaliSesler"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "701920884557-8cpg629ghg1n9294sas16fph9c1vcccc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBixmnY37lKxotB2DDvuBcbaixAsaJqhiI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "701920884557-8cpg629ghg1n9294sas16fph9c1vcccc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
